@@ -168,7 +168,7 @@ const Statement = () => {
                       ))
                     ) : (
                       <div className="h-full flexCenter mt-10">
-                        <div className="bg-gray-600 w-8 h-8 flexCenter rounded-full text-white">
+                        <div className=" bg-gray w-8 h-8 flexCenter rounded-full text-white">
                           <i className="fa fa-plus"></i>
                         </div>
                       </div>
@@ -216,7 +216,7 @@ const Statement = () => {
                       ))
                     ) : (
                       <div className="h-full flexCenter mt-10">
-                        <div className="bg-gray-600 w-8 h-8 flexCenter rounded-full text-white">
+                        <div className="bg-gray w-8 h-8 flexCenter rounded-full text-white">
                           <i className="fa fa-plus"></i>
                         </div>
                       </div>
