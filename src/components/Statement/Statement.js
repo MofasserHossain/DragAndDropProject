@@ -12,7 +12,6 @@ const getItems = (count, offset = 0) =>
     amount: Math.floor(Math.random() * (999 - 100 + 1) + 100),
   }))
 
-// a little function to help us with reordering the result
 const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list)
   const [removed] = result.splice(startIndex, 1)
@@ -21,9 +20,6 @@ const reorder = (list, startIndex, endIndex) => {
   return result
 }
 
-/**
- * Moves an item from one list to another list.
- */
 const move = (source, destination, droppableSource, droppableDestination) => {
   const sourceClone = Array.from(source)
   const destClone = Array.from(destination)
@@ -41,14 +37,11 @@ const move = (source, destination, droppableSource, droppableDestination) => {
 const grid = 8
 
 const getItemStyle = (isDragging, draggableStyle) => ({
-  // some basic styles to make the items look a bit nicer
   userSelect: 'none',
   padding: grid * 2,
   margin: `0 0 ${grid}px 0`,
-  // change background colour if dragging
   background: isDragging ? 'lightgreen' : '#A6B0CF',
   borderRadius: '10px',
-  // styles we need to apply on draggables
   ...draggableStyle,
 })
 
@@ -90,7 +83,7 @@ const Statement = () => {
         source.index,
         destination.index
       )
-      console.log(`Statement ~ items`, items)
+      // console.log(`Statement ~ items`, items)
       let newState = null
       if (source.droppableId === 'droppable') {
         newState = { items: items }
@@ -112,7 +105,7 @@ const Statement = () => {
         source,
         destination
       )
-      console.log(`Statement ~ result`, result)
+      // console.log(`Statement ~ result`, result)
       setState({
         ...state,
         items: !!result?.droppable ? result.droppable : state.items,
@@ -128,7 +121,7 @@ const Statement = () => {
   const totalNetProfit = () => {
     return findAmount(state.revenue) - findAmount(state.cost)
   }
-  console.log(findAmount(state.revenue))
+  // console.log(findAmount(state.revenue))
   return (
     <div className="mt-5">
       <DragDropContext onDragEnd={onDragEnd}>
