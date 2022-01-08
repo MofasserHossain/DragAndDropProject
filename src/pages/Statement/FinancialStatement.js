@@ -14,9 +14,7 @@ const FinancialStatement = () => {
           Bangladesh.
         </p>
       </div>
-
       {/* card */}
-      {/* <App /> */}
       <Statement />
     </div>
   )
