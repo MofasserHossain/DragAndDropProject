@@ -7,6 +7,7 @@ import code from '../../assets/images/svg/scan.svg'
 import translate from '../../assets/images/svg/translate.svg'
 import BreadCrumb from '../../components/common/BreadCrumb'
 import Button from '../../components/common/Button'
+import AuthorProfile from '../../components/Home/AuthorProfile'
 import BusinessCard from '../../components/Home/BusinessCard'
 import Description from '../../components/Home/Description'
 
@@ -103,6 +104,9 @@ const Home = ({ history }) => {
           <Button className={'btnOutline font-bold border-2 w-full mt-4'}>
             <span className="">Buy Now</span>{' '}
           </Button>
+
+          {/* author */}
+          <AuthorProfile />
         </Col>
       </Row>
     </div>
