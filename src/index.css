@@ -1,0 +1,40 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navLinks {
+    @apply flex items-center space-x-2;
+  }
+  .navItems {
+    @apply font-semibold;
+  }
+  .btn {
+    @apply border-none bg-transparent font-semibold p-0;
+  }
+  .flexAlignCenter {
+    @apply flex items-center;
+  }
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+  .flexCenterStart {
+    @apply flex items-center justify-start;
+  }
+  .flexBetween {
+    @apply flex  justify-between;
+  }
+  .flexCenterBetween {
+    @apply flex items-center justify-between;
+  }
+  .flexVCenter {
+    @apply flex flex-col items-center justify-between;
+  }
+  .btnFil {
+    @apply bg-blueColor text-white px-5 py-2 rounded-lg;
+  }
+  .btnOutline {
+    @apply border border-blueColor text-blueColor px-5 py-2 rounded-lg hover:text-white hover:bg-blueColor transition-all;
+  }
+}
